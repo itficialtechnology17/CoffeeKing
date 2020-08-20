@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_4sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlContentBG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/_8sdp">
+
+
+        <RelativeLayout
+            android:id="@+id/rlTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:orientation="horizontal">
+
+
+            <CheckBox
+                android:id="@+id/cbTick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="0dp"
+                android:layout_marginStart="@dimen/_8sdp" />
+
+            <TextView
+                android:id="@+id/tvCheckListTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:textColor="@color/colorBlack"
+                android:layout_toEndOf="@+id/cbTick"
+                android:text="@string/app_name"
+                android:textSize="@dimen/_14ssp" />
+
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/etReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlTop"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:gravity="start"
+            android:hint="Reason" />
+
+    </RelativeLayout>
+
+</LinearLayout>

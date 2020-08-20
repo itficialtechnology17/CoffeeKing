@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlContentBG"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlBG"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_centerVertical="true"
+            android:text="Name"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/tvUserType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvUserName"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginStart="@dimen/_4sdp"/>
+
+
+        <ImageView
+            android:id="@+id/ivSelector"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:src="@drawable/ic_selector" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#571109</color>
+    <color name="colorPrimaryDark">#571109</color>
+    <color name="colorAccent">#571109</color>
+    <color name="colorTheme">#571109</color>
+    <color name="colorThemeLight">#E68862</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBG">#F4F6F9</color>
+    <color name="colorLine">#DDDDDD</color>
+    <color name="colorLightGray">#D1CECE</color>
+    <color name="colorGray1">#F4F4F4</color>
+    <color name="colorGray2">#A8A7A7</color>
+    <color name="colorPlaceHolder">#DDDDDD</color>
+    <color name="colorRed">#FF1100</color>
+    <color name="colorOrange">#FF5722</color>
+    <color name="colorGreen">#4CAF50</color>
+
+
+    <color name="color1">#CCFFCDD2</color>
+    <color name="color2">#CCE1BEE7</color>
+    <color name="color3">#CCC5CAE9</color>
+    <color name="color4">#CCB3E5FC</color>
+    <color name="color5">#CCC8E6C9</color>
+
+    <color name="color6">#CCD7CCC8</color>
+    <color name="color7">#CCFFE082</color>
+    <color name="color8">#CCFFAB91</color>
+    <color name="color9">#CCD7CCC8</color>
+    <color name="color10">#CCB0BEC5</color>
+    <color name="colorGray3">#cccccc</color>
+
+
+    <array name="colorBG">
+        <item>@color/color1</item>
+        <item>@color/color2</item>
+        <item>@color/color3</item>
+        <item>@color/color4</item>
+        <item>@color/color5</item>
+
+        <item>@color/color6</item>
+        <item>@color/color7</item>
+        <item>@color/color8</item>
+        <item>@color/color9</item>
+        <item>@color/color10</item>
+    </array>
+</resources>

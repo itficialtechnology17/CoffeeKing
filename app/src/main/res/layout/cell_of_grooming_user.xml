@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlContentBG"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/tvIndex"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="2"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/tvEventName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_toEndOf="@+id/tvIndex"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_toStartOf="@+id/ivSelector"
+            android:gravity="center_vertical"
+            android:text="Event Name"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/tvChecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Checked"
+            android:textStyle="bold"
+            android:textColor="@color/colorGreen"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_12sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorLine"/>
+
+    </RelativeLayout>
+</RelativeLayout>

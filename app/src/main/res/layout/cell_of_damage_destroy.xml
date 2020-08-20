@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rlContentBG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:background="@color/colorWhite"
+        android:paddingTop="@dimen/_4sdp">
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/_8sdp"
+            android:text="Lost Found Item Name"
+            android:paddingStart="@dimen/_8sdp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvItemName"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/_8sdp"
+            android:text="Reason"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvReason"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/_8sdp"
+            android:text="Reason"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <TextView
+            android:id="@+id/tvMobileNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_call_black_24dp"
+            android:drawablePadding="@dimen/_8sdp"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:text="XXXXXXXXX"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/tvTimeStamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMobileNo"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:gravity="center_vertical|end"
+            android:text="2020-03-14 11:00:00" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

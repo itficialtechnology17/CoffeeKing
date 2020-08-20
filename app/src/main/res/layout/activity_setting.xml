@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    tools:context=".activity.SettingActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@color/colorWhite"
+        android:elevation="@dimen/_2sdp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Setting"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ic_back" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlTop"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorWhite">
+
+            <RelativeLayout
+                android:id="@+id/rlUser"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/ivUser"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_manage_user"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:text="Manage User"
+                    android:layout_toEndOf="@+id/ivUser"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_15ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:rotation="-90"
+                    android:tint="@color/colorPlaceHolder"
+                    android:src="@drawable/ic_arrow_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLine"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCheckList"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/ivCheckList"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_check_list"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:text="Manage Manager Check List"
+                    android:layout_toEndOf="@+id/ivCheckList"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_15ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:rotation="-90"
+                    android:tint="@color/colorPlaceHolder"
+                    android:src="@drawable/ic_arrow_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLine"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCategory"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/ivCategory"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_category"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:text="Manage Category"
+                    android:layout_toEndOf="@+id/ivCategory"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_15ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:rotation="-90"
+                    android:tint="@color/colorPlaceHolder"
+                    android:src="@drawable/ic_arrow_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLine"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlFood"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/ivFood"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_food"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:text="Manage Food"
+                    android:layout_toEndOf="@+id/ivFood"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_15ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:rotation="-90"
+                    android:tint="@color/colorPlaceHolder"
+                    android:src="@drawable/ic_arrow_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLine"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlEventType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/ivEType"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_event_type"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:text="Event Type"
+                    android:layout_toEndOf="@id/ivEType"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_15ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:rotation="-90"
+                    android:tint="@color/colorPlaceHolder"
+                    android:src="@drawable/ic_arrow_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLine"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlUpgradeEvent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/ivUpgradeEvent"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_upgrade_event"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_toEndOf="@+id/ivUpgradeEvent"
+                    android:text="Upgrade Event"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_15ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:rotation="-90"
+                    android:tint="@color/colorPlaceHolder"
+                    android:src="@drawable/ic_arrow_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLine"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlCouplePackage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/ivCouplePackage"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_couple_package"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:text="Couple Package"
+                    android:textColor="@color/colorBlack"
+                    android:layout_toEndOf="@+id/ivCouplePackage"
+                    android:textSize="@dimen/_15ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:rotation="-90"
+                    android:tint="@color/colorPlaceHolder"
+                    android:src="@drawable/ic_arrow_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLine"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlDutyChart"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/ivDutyChart"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_couple_package"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:text="Duty Package"
+                    android:textColor="@color/colorBlack"
+                    android:layout_toEndOf="@+id/ivDutyChart"
+                    android:textSize="@dimen/_15ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:rotation="-90"
+                    android:tint="@color/colorPlaceHolder"
+                    android:src="@drawable/ic_arrow_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLine"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlShift"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/ivShift"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_couple_package"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:text="Manage Shift"
+                    android:textColor="@color/colorBlack"
+                    android:layout_toEndOf="@+id/ivShift"
+                    android:textSize="@dimen/_15ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:rotation="-90"
+                    android:tint="@color/colorPlaceHolder"
+                    android:src="@drawable/ic_arrow_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLine"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlLogout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/ivLogout"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_logout"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:text="Logout"
+                    android:layout_toEndOf="@+id/ivLogout"
+                    android:textSize="@dimen/_15ssp" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLine"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

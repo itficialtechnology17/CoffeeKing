@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray1"
+    tools:context=".activity.CouplePackageActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@color/colorWhite"
+        android:elevation="@dimen/_2sdp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Party At Hall"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvPackagePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textColor="@color/colorGreen"
+            android:gravity="center"
+            android:text="Rs. 0"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/etAdvancePayment"
+        android:layout_below="@+id/rlTop"
+        android:layout_margin="@dimen/_16sdp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTableHallAddedOn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center" />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/etAdvancePayment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/ic_bg_corner_white"
+        android:hint="Advance Payment"
+        android:inputType="number"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_6sdp"
+        android:singleLine="true"
+        android:textSize="@dimen/_13ssp"
+        android:layout_above="@+id/llBottom"/>
+
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_bg_btn"
+            android:minWidth="@dimen/_200sdp"
+            android:text="Finish"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/rlLoader"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_bg_btn"
+            android:minWidth="@dimen/_200sdp"
+            android:visibility="gone">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerInParent="true"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="ic_loader.json"
+                app:lottie_loop="true" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

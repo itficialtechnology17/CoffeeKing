@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray1"
+    tools:context=".manager.ReminderActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@color/colorWhite"
+        android:elevation="@dimen/_2sdp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Reminder"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_back" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlTop"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:id="@+id/llDateOfReminder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_bg_corner_white"
+                    android:gravity="center"
+                    android:minHeight="@dimen/_40sdp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:text="Date"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <TextView
+                        android:id="@+id/tvReminderDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:text="Date Of Reminder"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTimeOfReminder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_bg_corner_white"
+                    android:gravity="center"
+                    android:minHeight="@dimen/_40sdp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:text="Time"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <TextView
+                        android:id="@+id/tvReminderTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:text="Time Of Reminder"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlUser"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/ic_bg_corner_white">
+
+                <TextView
+                    android:id="@+id/tvUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toStartOf="@+id/rlArrowProgressBar"
+                    android:gravity="center_vertical"
+                    android:hint="User"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_13ssp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlArrowProgressBar"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_22sdp">
+
+                    <ImageView
+                        android:id="@+id/ivUArrow"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_arrow_down"
+                        android:tint="@color/colorLightGray"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/progress"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.github.florent37.shapeofview.shapes.BubbleView
+                android:id="@+id/viewUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:visibility="gone"
+                app:arrow_posititon_percent="0.9"
+                app:shape_bubble_arrowHeight="10dp"
+                app:shape_bubble_arrowPosition="top"
+                app:shape_bubble_arrowWidth="10dp"
+                app:shape_bubble_borderRadius="8dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:minHeight="@dimen/_100sdp"
+                    android:padding="@dimen/_8sdp" />
+
+            </com.github.florent37.shapeofview.shapes.BubbleView>
+
+            <EditText
+                android:id="@+id/etNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/ic_bg_corner_white"
+                android:gravity="start"
+                android:hint="Reminder Notes"
+                android:minHeight="@dimen/_100sdp"
+                android:padding="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textSize="@dimen/_13ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_16sdp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/ic_bg_corner_theme"
+                android:text="Submit"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlLoader"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/ic_bg_corner_theme"
+                android:visibility="gone">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerInParent="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="ic_loader.json"
+                    app:lottie_loop="true" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlTop"
+        android:paddingTop="@dimen/_8sdp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReminder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_4sdp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_add"
+            android:tint="@color/colorWhite"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/_24sdp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

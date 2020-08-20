@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:id="@+id/rlCategory"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLightGray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/ivArrow"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvCategoryName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:gravity="center_vertical"
+                        android:background="@color/colorLightGray"
+                        android:minWidth="@dimen/_100sdp"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14ssp" />
+
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:gravity="center_vertical"
+                        android:background="@color/colorLightGray"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvMaximum"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:gravity="center_vertical"
+                    android:background="@color/colorLightGray"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textSize="@dimen/_8ssp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/ivArrow"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@color/colorLightGray"
+                android:layout_marginEnd="@dimen/_16sdp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray1"
+    tools:context=".manager.EmployeeDeploymentActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@color/colorWhite"
+        android:elevation="@dimen/_2sdp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Employee Deployment"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/ivPdf"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_pdf" />
+
+        <ProgressBar
+            android:id="@+id/progressPdf"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlTop">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_16sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llInCharge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/rlInChargeUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/ic_bg_corner_white">
+
+                    <TextView
+                        android:id="@+id/tvInChargeUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toStartOf="@+id/rlArrowProgressBarInCharge"
+                        android:gravity="center_vertical"
+                        android:hint="Select Employee"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlArrowProgressBarInCharge"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_22sdp">
+
+                        <ImageView
+                            android:id="@+id/ivIArrow"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_arrow_down"
+                            android:tint="@color/colorLightGray"
+                            android:visibility="gone" />
+
+                        <ProgressBar
+                            android:id="@+id/progressInCharge"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <com.github.florent37.shapeofview.shapes.BubbleView
+                    android:id="@+id/viewInChargeUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:visibility="gone"
+                    app:arrow_posititon_percent="0.9"
+                    app:shape_bubble_arrowHeight="10dp"
+                    app:shape_bubble_arrowPosition="top"
+                    app:shape_bubble_arrowWidth="10dp"
+                    app:shape_bubble_borderRadius="8dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:minHeight="@dimen/_100sdp"
+                        android:padding="@dimen/_8sdp" />
+
+                </com.github.florent37.shapeofview.shapes.BubbleView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDateOfShift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/ic_bg_corner_white"
+                android:gravity="center"
+                android:minHeight="@dimen/_40sdp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:maxLines="1"
+                    android:text="Date"
+                    android:textSize="@dimen/_8ssp" />
+
+                <TextView
+                    android:id="@+id/tvDateOfShift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="center_horizontal"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:text="Date Of Shift"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/calendarShiftDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:elevation="@dimen/_2sdp"
+                android:visibility="gone"
+                app:mcv_selectionMode="range" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSelectedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/llShift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rlShift"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/ic_bg_corner_white">
+
+                    <TextView
+                        android:id="@+id/tvShift"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toStartOf="@+id/rlEnd"
+                        android:gravity="center_vertical"
+                        android:hint="Select Shift"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlEnd"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_22sdp">
+
+                        <ImageView
+                            android:id="@+id/ivSArrow"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_arrow_down"
+                            android:tint="@color/colorLightGray"
+                            android:visibility="gone" />
+
+                        <ProgressBar
+                            android:id="@+id/progressShift"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <com.github.florent37.shapeofview.shapes.BubbleView
+                    android:id="@+id/viewShift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:visibility="gone"
+                    app:arrow_posititon_percent="0.9"
+                    app:shape_bubble_arrowHeight="10dp"
+                    app:shape_bubble_arrowPosition="top"
+                    app:shape_bubble_arrowWidth="10dp"
+                    app:shape_bubble_borderRadius="8dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvShift"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:minHeight="@dimen/_100sdp"
+                        android:padding="@dimen/_8sdp" />
+
+                </com.github.florent37.shapeofview.shapes.BubbleView>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShiftDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:visibility="visible"/>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/ic_bg_corner_theme"
+                android:text="Submit"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlLoader"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/ic_bg_corner_theme"
+                android:visibility="gone">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerInParent="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="ic_loader.json"
+                    app:lottie_loop="true" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

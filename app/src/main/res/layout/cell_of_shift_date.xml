@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlSelectedShiftDate"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_40sdp"
+        android:gravity="center_vertical"
+        android:layout_margin="@dimen/_4sdp">
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="15-03-2020"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/colorGreen" />
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@color/colorWhite"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvDate"/>
+
+        <TextView
+            android:id="@+id/tvShiftType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/viewLine"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:text="Morning Shift"
+            android:textSize="@dimen/_12ssp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

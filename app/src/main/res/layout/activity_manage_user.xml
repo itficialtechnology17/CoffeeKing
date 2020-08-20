@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    tools:context=".adminactivity.ManageUserActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@color/colorWhite"
+        android:elevation="@dimen/_2sdp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Manage User"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/ivAdd"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_add" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlTop"
+        android:visibility="visible">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_8sdp"
+            android:visibility="gone" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/slRecycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_8sdp"
+            android:orientation="vertical"
+            shimmer:duration="800">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_cell_of_admin_food" />
+
+                <include layout="@layout/shimmer_cell_of_admin_food" />
+
+                <include layout="@layout/shimmer_cell_of_admin_food" />
+
+                <include layout="@layout/shimmer_cell_of_admin_food" />
+
+                <include layout="@layout/shimmer_cell_of_admin_food" />
+
+                <include layout="@layout/shimmer_cell_of_admin_food" />
+
+                <include layout="@layout/shimmer_cell_of_admin_food" />
+
+                <include layout="@layout/shimmer_cell_of_admin_food" />
+
+                <include layout="@layout/shimmer_cell_of_admin_food" />
+
+                <include layout="@layout/shimmer_cell_of_admin_food" />
+
+                <include layout="@layout/shimmer_cell_of_admin_food" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAddUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlTop"
+        android:visibility="gone">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llCollectInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_16sdp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/etUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/ic_bg_corner_white"
+                        android:hint="User Name"
+                        android:paddingStart="@dimen/_16sdp"
+                        android:paddingEnd="@dimen/_6sdp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_13ssp" />
+
+
+                    <EditText
+                        android:id="@+id/etMobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:background="@drawable/ic_bg_corner_white"
+                        android:hint="Mobile Number"
+                        android:inputType="number"
+                        android:paddingStart="@dimen/_16sdp"
+                        android:paddingEnd="@dimen/_6sdp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:background="@drawable/ic_bg_corner_white"
+                        android:hint="Password"
+                        android:paddingStart="@dimen/_16sdp"
+                        android:paddingEnd="@dimen/_6sdp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlEventType"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:background="@drawable/ic_bg_corner_white">
+
+                        <TextView
+                            android:id="@+id/tvUserType"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toStartOf="@+id/rlArrowProgressBar"
+                            android:gravity="center_vertical"
+                            android:hint="User Type"
+                            android:paddingStart="@dimen/_16sdp"
+                            android:paddingEnd="@dimen/_8sdp"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlArrowProgressBar"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_22sdp">
+
+                            <ImageView
+                                android:id="@+id/ivUTArrow"
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_arrow_down"
+                                android:tint="@color/colorLightGray"
+                                android:visibility="gone" />
+
+                            <ProgressBar
+                                android:id="@+id/progress"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <com.github.florent37.shapeofview.shapes.BubbleView
+                        android:id="@+id/viewUserType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:visibility="gone"
+                        app:arrow_posititon_percent="0.9"
+                        app:shape_bubble_arrowHeight="10dp"
+                        app:shape_bubble_arrowPosition="top"
+                        app:shape_bubble_arrowWidth="10dp"
+                        app:shape_bubble_borderRadius="8dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvUserType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorWhite"
+                            android:minHeight="@dimen/_100sdp"
+                            android:padding="@dimen/_8sdp" />
+
+                    </com.github.florent37.shapeofview.shapes.BubbleView>
+
+                    <RelativeLayout
+                        android:id="@+id/rlCafeLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:background="@drawable/ic_bg_corner_white">
+
+                        <TextView
+                            android:id="@+id/tvCafeLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toStartOf="@+id/rlArrowProgressBarCafeLocation"
+                            android:gravity="center_vertical"
+                            android:hint="Location"
+                            android:paddingStart="@dimen/_16sdp"
+                            android:paddingEnd="@dimen/_8sdp"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlArrowProgressBarCafeLocation"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_22sdp">
+
+                            <ImageView
+                                android:id="@+id/ivCLArrow"
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_arrow_down"
+                                android:tint="@color/colorLightGray"
+                                android:visibility="gone" />
+
+                            <ProgressBar
+                                android:id="@+id/progressCafeLocation"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <com.github.florent37.shapeofview.shapes.BubbleView
+                        android:id="@+id/viewCafeLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:visibility="gone"
+                        app:arrow_posititon_percent="0.9"
+                        app:shape_bubble_arrowHeight="10dp"
+                        app:shape_bubble_arrowPosition="top"
+                        app:shape_bubble_arrowWidth="10dp"
+                        app:shape_bubble_borderRadius="8dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvCafeLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorWhite"
+                            android:minHeight="@dimen/_100sdp"
+                            android:padding="@dimen/_8sdp" />
+
+                    </com.github.florent37.shapeofview.shapes.BubbleView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:background="@drawable/ic_bg_corner_white">
+
+                        <TextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_16sdp"
+                            android:text="Active"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <Switch
+                            android:id="@+id/switchUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_8sdp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llLoader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/btnAddUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/_24sdp"
+                        android:background="@drawable/ic_bg_btn"
+                        android:minWidth="@dimen/_200sdp"
+                        android:text="Add"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlLoader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/_24sdp"
+                        android:background="@drawable/ic_bg_btn"
+                        android:minWidth="@dimen/_200sdp"
+                        android:visibility="gone">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_centerInParent="true"
+                            app:lottie_autoPlay="true"
+                            app:lottie_fileName="ic_loader.json"
+                            app:lottie_loop="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

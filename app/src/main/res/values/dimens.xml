@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="header_iv_size">@dimen/_25sdp</dimen>
+    <dimen name="cell_iv_size">@dimen/_20sdp</dimen>
+    <dimen name="cv_size">@dimen/_110sdp</dimen>
+    <dimen name="iv_cv_icon_size">@dimen/_30sdp</dimen>
+</resources>

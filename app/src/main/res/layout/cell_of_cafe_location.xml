@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlCafeContentBG"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+
+        <TextView
+            android:id="@+id/tvCafeName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_toStartOf="@+id/ivSelector"
+            android:gravity="center_vertical"
+            android:text="Cafe Name"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_13ssp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

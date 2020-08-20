@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorThemeLight"
+    tools:context=".activity.LoginActivity">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/ivSmallIcon"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:src="@drawable/ic_app_icon_tran"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:background="@drawable/ic_bg_corner_white"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_below="@+id/ivSmallIcon">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_20sdp">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12ssp"
+                android:text="User Name"/>
+
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:singleLine="true"
+                android:inputType="number|numberDecimal"
+                android:background="@drawable/ic_bg_white"
+                android:layout_marginTop="@dimen/_2sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_16sdp"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:background="@drawable/ic_bg_white"
+                android:layout_marginTop="@dimen/_2sdp"/>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/ic_bg_corner_theme"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:text="Log In"/>
+
+            <RelativeLayout
+                android:id="@+id/rlLoader"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:visibility="gone"
+                android:background="@drawable/ic_bg_corner_theme">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerInParent="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="ic_loader.json"
+                    app:lottie_loop="true" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        </RelativeLayout>
+        
+    </RelativeLayout>
+
+</RelativeLayout>
